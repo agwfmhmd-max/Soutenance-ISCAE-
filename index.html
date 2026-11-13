@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<script>try{var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){}</script>
+<title>SOUTENANCE VALIDÉE — ISCAE Promotion 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Pinyon+Script&family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--n:#0a2540;--n2:#12396b;--t:#14b8a6;--t2:#5eead4;--r:18px}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;font-family:Inter,'Segoe UI',system-ui,sans-serif;color:var(--n);background:linear-gradient(135deg,#061a33,#0f4c75 55%,#0e7490)}
+.hero{text-align:center;color:#fff;padding:6px 16px 18px}
+.inst{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+h1#logo{margin:12px 0 6px;font-size:clamp(1.9rem,6.5vw,3.8rem);font-weight:800;letter-spacing:.06em;cursor:pointer;user-select:none;background:linear-gradient(90deg,#fff,var(--t2),#fff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:0;opacity:.85}
+main{flex:1;width:100%;max-width:1150px;margin:0 auto;padding:12px 14px 30px}
+.card{background:rgba(255,255,255,.95);border-radius:var(--r);padding:22px;margin:14px 0;box-shadow:0 14px 40px rgba(0,0,0,.25);animation:in .4s ease}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+.card h3{margin:0 0 10px}.lead{color:#fff;font-weight:600;text-align:center;font-size:1.05rem}
+input,select,button,textarea{font:inherit}
+input,select{padding:11px 13px;border:1.5px solid #cbd5e1;border-radius:12px;width:100%;background:#fff}
+input:focus,select:focus{outline:2px solid var(--t);border-color:var(--t)}
+.btn,button.b{background:linear-gradient(135deg,var(--n2),var(--t));color:#fff;border:0;border-radius:12px;padding:11px 20px;font-weight:600;cursor:pointer;transition:.2s}
+.btn:hover,button.b:hover{transform:translateY(-1px);filter:brightness(1.08)}
+.b2{background:#e2e8f0!important;color:var(--n)!important}.bd{background:#dc2626!important}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.row>*{flex:1;min-width:140px}.row>button{flex:0 0 auto}
+.days{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:14px 0}
+.day{background:rgba(255,255,255,.95);border:3px solid transparent;border-radius:22px;padding:24px;text-align:center;cursor:pointer;transition:.25s;font:inherit;color:var(--n)}
+.day:hover{transform:translateY(-4px)}.day.sel{border-color:var(--t);box-shadow:0 0 0 5px rgba(20,184,166,.35)}
+.day small{display:block;letter-spacing:.2em;color:var(--t);font-weight:800}.day strong{display:block;font-size:1.35rem;margin:6px 0}.day em{display:block;font-size:2.1rem;font-style:normal;font-weight:800;margin-bottom:12px}
+.day .btn{display:inline-block}.info .day{cursor:default}.info .day:hover{transform:none}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 16px}.kv span{color:#64748b}
+.msg{padding:14px;border-radius:12px;margin:12px 0;font-weight:600}.err{background:#fee2e2;color:#991b1b}.okm{background:#d1fae5;color:#065f46}
+.ok{border-inline-start:6px solid var(--t)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}.tabs button{background:rgba(255,255,255,.18);color:#fff;border:0;border-radius:12px;padding:10px 16px;cursor:pointer;font-weight:600}.tabs button.on{background:#fff;color:var(--n)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.st{background:#f0fdfa;border-radius:14px;padding:14px;text-align:center}.st b{display:block;font-size:1.8rem;color:var(--n2)}.st span{font-size:.8rem;color:#475569}
+.bar{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:.85rem}.bar i{display:block;height:14px;border-radius:8px;background:linear-gradient(90deg,var(--n2),var(--t));min-width:3px;transition:width .6s}.bar span{width:70px}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.88rem}th{background:var(--n);color:#fff;text-align:start;padding:9px;white-space:nowrap}td{padding:8px 9px;border-bottom:1px solid #e2e8f0}tr:nth-child(even) td{background:#f8fafc}
+.act button{border:0;background:#e2e8f0;border-radius:8px;padding:4px 8px;margin:1px;cursor:pointer}
+.modal{position:fixed;inset:0;background:rgba(6,26,51,.75);display:flex;align-items:center;justify-content:center;z-index:50;padding:16px}.modal[hidden]{display:none}.modal .card{width:100%;max-width:400px}
+#ld{position:fixed;top:0;left:0;height:4px;width:0;background:var(--t2);z-index:99;transition:width .4s}
+#tt{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);padding:12px 20px;border-radius:12px;color:#fff;font-weight:600;z-index:99;display:none;max-width:92vw}
+footer{text-align:center;padding:22px;color:#fff}.sig{font-family:'Pinyon Script',cursive;font-size:2rem;background:linear-gradient(90deg,var(--t2),#fff);-webkit-background-clip:text;background-clip:text;color:transparent}.sig small{font-family:Inter,sans-serif;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:#cbd5e1;-webkit-text-fill-color:#cbd5e1;margin-right:8px}
+h2.sec{color:#fff;margin:22px 0 4px}
+.tb{display:flex;justify-content:flex-end;max-width:1150px;margin:0 auto;padding:12px 14px 0}.lgb{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:7px 16px;font-weight:600;font-size:.9rem;cursor:pointer}.sub{display:inline-block;margin:2px 0 10px;padding:6px 18px;border-radius:999px;background:rgba(94,234,212,.15);border:1px solid rgba(94,234,212,.5);color:var(--t2);font-weight:600;letter-spacing:.08em;font-size:clamp(.85rem,2.6vw,1.1rem)}.lgb:hover{background:rgba(255,255,255,.3)}
+.tb{gap:8px}
+.cdw{background:linear-gradient(135deg,rgba(10,37,64,.93),rgba(14,116,144,.93));border:1px solid rgba(94,234,212,.55);border-radius:22px;padding:24px 14px;margin:16px 0;text-align:center;color:#fff;box-shadow:0 14px 40px rgba(0,0,0,.35),0 0 34px rgba(20,184,166,.28);animation:in .4s ease}
+.cdw h3{margin:0 0 4px;font-size:clamp(1.05rem,3.6vw,1.55rem)}.cdw p{margin:0 0 16px;opacity:.85;font-size:.92rem}
+.cdt{display:flex;justify-content:center;gap:clamp(8px,2.5vw,18px);flex-wrap:wrap;direction:ltr}
+.cdt>div{min-width:clamp(66px,19vw,100px);padding:14px 8px;border-radius:16px;background:rgba(255,255,255,.1);border:1px solid rgba(94,234,212,.4)}
+.cdt b{display:block;font-size:clamp(1.8rem,7vw,3.2rem);font-weight:800;line-height:1;color:var(--t2);font-variant-numeric:tabular-nums}
+.cdt span{display:block;margin-top:7px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.cdt>div:last-child b{animation:pl 1s ease-in-out infinite}
+@keyframes pl{50%{transform:scale(1.1);opacity:.7}}
+.rk{text-align:center;border:2px solid var(--t)}.rk .kv{text-align:start}
+.rkn{font-size:clamp(3rem,14vw,5.5rem);font-weight:800;line-height:1.1;margin:6px 0 12px;background:linear-gradient(135deg,var(--n2),var(--t));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stp{display:block;margin:12px 0 4px;font-weight:600}
+.dz{border:1.5px dashed #dc2626}
+[data-theme=dark]{color-scheme:dark}
+[data-theme=dark] body{background:linear-gradient(135deg,#020617,#0b1f3a 55%,#064e5b);color:#e2e8f0}
+[data-theme=dark] .card{background:rgba(15,23,42,.96);color:#e2e8f0;box-shadow:0 14px 40px rgba(0,0,0,.5)}
+[data-theme=dark] input,[data-theme=dark] select{background:#0f172a;color:#e2e8f0;border-color:#334155}
+[data-theme=dark] .day{background:rgba(15,23,42,.96);color:#e2e8f0}
+[data-theme=dark] .day small{color:var(--t2)}
+[data-theme=dark] .st{background:#10303a}[data-theme=dark] .st b{color:var(--t2)}
+[data-theme=dark] .st span,[data-theme=dark] .kv span{color:#94a3b8}
+[data-theme=dark] td{border-bottom-color:#1e293b}[data-theme=dark] tr:nth-child(even) td{background:#0b1426}[data-theme=dark] th{background:#134e5e}
+[data-theme=dark] .act button,[data-theme=dark] .b2{background:#1e293b!important;color:#e2e8f0!important}
+[data-theme=dark] .err{background:#450a0a;color:#fecaca}[data-theme=dark] .okm{background:#052e2b;color:#99f6e4}
+[data-theme=dark] .tabs button.on{background:#0f172a;color:var(--t2)}
+[data-theme=dark] [style*="#475569"]{color:#94a3b8!important}
+[dir=rtl] body{font-family:Cairo,Inter,'Segoe UI',system-ui,sans-serif}[dir=rtl] .sig small{letter-spacing:0}
+</style></head><body>
+<div id="ld"></div><div id="tt"></div>
+<div class="tb"><button id="th" class="lgb" data-nt type="button">🌙</button><button id="lg" class="lgb" data-nt type="button">🌐 العربية</button></div><header class="hero"><div class="inst">Institut Supérieur de Comptabilité et d’Administration des Entreprises (ISCAE)</div>
+<h1 id="logo">SOUTENANCE VALIDÉE</h1><div class="sub">Soutenance du Rapport de stage</div><p>Plateforme de programmation des soutenances BA&amp;FC — Promotion 2026.</p></header>
+<main>
+<section id="stu">
+ <p class="lead">Bienvenue sur la plateforme de programmation des soutenances BA&amp;FC.</p>
+ <div id="cd"></div>
+ <div id="info" class="days info"></div>
+ <div class="card"><p>Veuillez saisir votre numéro de matricule pour accéder à votre espace.</p>
+  <form id="sf" class="row"><input id="mat" placeholder="Numéro de matricule" autocomplete="off" required><button class="b">Rechercher mon dossier</button></form></div>
+ <div id="res"></div>
+</section>
+<section id="adm" hidden>
+ <div class="row" style="justify-content:space-between"><div class="tabs" id="tabs"></div><button class="b b2" id="out" style="flex:0 0 auto">Déconnexion</button></div>
+ <div id="tab"></div>
+</section>
+</main>
+<footer><div class="sig"><small>Développé par</small>MDA</div></footer>
+<div id="login" class="modal" hidden><form class="card" id="lf"><h3>Accès administrateur</h3>
+ <p><input id="em" type="email" placeholder="Email" required></p><p><input id="pw" type="password" placeholder="Mot de passe" required></p>
+ <div id="le"></div><div class="row"><button class="b">Se connecter</button><button type="button" class="b b2" id="lc">Annuler</button></div></form></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+/* ================= CONFIG SUPABASE (clé publique uniquement) ================= */
+const SBURL='https://pgdztepciypyqwwdludv.supabase.co',SBKEY='sb_publishable_m4EQUZ2dXvuZPF0Rt7WEMA_sj_dClYB';
+const sb=supabase.createClient(SBURL,SBKEY);
+/* ================= OUTILS ================= */
+let LANG='fr';
+const $=i=>document.getElementById(i),TZ='Africa/Nouakchott',LC=()=>LANG=='ar'?'ar-u-nu-latn-ca-gregory':'fr-FR';
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fd=d=>new Date(d+'T12:00:00Z').toLocaleDateString(LC(),{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});
+const ft=t=>LANG=='ar'?String(t).slice(0,5):String(t).slice(0,5).replace(':','h');
+const fdt=s=>s?new Date(s).toLocaleString(LC(),{timeZone:TZ}):'—';
+const SP={BA3:'Banque et Assurance (BA3)',FC3:'Finance et Comptabilité (FC3)'},DY={vendredi:'Vendredi',samedi:'Samedi'};
+const cmp=(a,b)=>a.matricule.localeCompare(b.matricule,'en',{numeric:true})||(a.matricule<b.matricule?-1:a.matricule>b.matricule?1:0);
+let busyN=0;const busy=b=>{busyN+=b?1:-1;$('ld').style.width=busyN>0?'80%':'0'};
+function toast(m,ok=true){const t=$('tt');t.textContent=m;t.style.background=ok?'#0f766e':'#b91c1c';t.style.display='block';clearTimeout(t.h);t.h=setTimeout(()=>t.style.display='none',4500)}
+const getSet=async()=>{const{data,error}=await sb.from('platform_settings').select('*').eq('id',1).single();if(error)throw error;return data};
+const dayCard=(d,S,btn)=>`<${btn?'button':'div'} class="day" data-d="${d}"><small>${DY[d].toUpperCase()}</small><strong>${fd(S[d=='vendredi'?'friday_date':'saturday_date']).split(' ').slice(1).join(' ').toUpperCase()}</strong><em>${ft(S[d=='vendredi'?'friday_start_time':'saturday_start_time'])}</em>${btn?'<span class="btn">Choisir cette journée</span>':'<small style="letter-spacing:0;color:#475569">Début des soutenances</small>'}</${btn?'button':'div'}>`;
+
+/* Chargement différé des bibliothèques lourdes (Excel/PDF) : accélère l'ouverture du site */
+const LIBS={xlsx:'https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js',jspdf:'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js',atb:'https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js'},LP={};
+const need=k=>LP[k]||(LP[k]=new Promise((ok,ko)=>{const e=document.createElement('script');e.src=LIBS[k];e.onload=ok;e.onerror=()=>{delete LP[k];ko(new Error('Chargement de la bibliothèque impossible. Vérifiez votre connexion.'))};document.head.appendChild(e)}));
+/* ================= ESPACE ÉTUDIANT ================= */
+let S,ST,pick;
+const renderInfo=()=>{$('info').innerHTML=dayCard('vendredi',S)+dayCard('samedi',S)};
+/* ---- Heure serveur, début des inscriptions et compte à rebours ---- */
+let CD=null,OFF=0;
+const now=()=>Date.now()+OFF;
+const startMs=()=>S&&S.registration_start_at?Date.parse(S.registration_start_at):0;
+const started=()=>now()>=startMs();
+const canReg=()=>!!(S&&S.registration_open&&started());
+const ck=()=>S?S.registration_open+'|'+S.registration_start_at:'';
+async function syncClock(){try{const t0=Date.now(),r=await fetch(SBURL+'/rest/v1/',{headers:{apikey:SBKEY}}),d=r.headers.get('date');if(d)OFF=Date.parse(d)-(t0+Date.now())/2}catch(e){}}
+function renderCountdown(){clearInterval(CD);const el=$('cd');if(!el)return;
+ if(!(S&&S.registration_open&&!started())){el.innerHTML='';return}
+ const t=startMs(),p2=n=>String(n).padStart(2,'0');
+ el.innerHTML=`<div class="cdw"><h3>Ouverture des inscriptions dans</h3><p>${esc(fdt(S.registration_start_at))} <span>(heure de Nouakchott)</span></p><div class="cdt"><div><b id="cd_d">00</b><span>Jours</span></div><div><b id="cd_h">00</b><span>Heures</span></div><div><b id="cd_m">00</b><span>Minutes</span></div><div><b id="cd_s">00</b><span>Secondes</span></div></div></div>`;
+ const tick=()=>{const ms=t-now();if(ms<=0){clearInterval(CD);opened();return}
+  const r=Math.ceil(ms/1000);$('cd_d').textContent=p2(Math.floor(r/86400));$('cd_h').textContent=p2(Math.floor(r%86400/3600));$('cd_m').textContent=p2(Math.floor(r%3600/60));$('cd_s').textContent=p2(r%60)};
+ tick();CD=setInterval(tick,1000)}
+async function opened(){try{S=await getSet()}catch(e){}renderInfo();renderCountdown();if(!isAdm){if(ST)renderStu();if(canReg())toast('Les inscriptions sont maintenant ouvertes !')}}
+/* ---- Numéro d'ordre de l'étudiant ---- */
+const RKM={date:"Par ordre d'inscription (premier inscrit, premier servi)",mat:'Par numéro de matricule'};
+async function refreshRank(){if(!$('rk')||!ST||!ST.registered)return;
+ try{const{data,error}=await sb.rpc('get_student_rank',{p_matricule:ST.matricule});if(error||!data||!data.registered)return;const el=$('rk');if(!el)return;
+  el.innerHTML=data.visible?`<div class="card rk"><h3>Votre numéro d'ordre de passage</h3><div class="rkn">${esc(data.rank)}</div><div class="kv"><span>Filière</span><b>${SP[ST.specialty]}</b><span>Journée</span><b>${fd(ST.selected_date)}</b><span>Effectif de la journée</span><b>${esc(data.total)}</b><span>Mode de classement</span><b>${RKM[data.method]||''}</b></div></div>`
+  :`<div class="card"><div class="msg okm">Votre numéro d'ordre sera affiché dès que tous les étudiants de votre filière auront choisi leur journée.</div></div>`}catch(x){}}
+async function sync(){if(isAdm||document.hidden||!S)return;try{const o=canReg(),oa=S.allow_student_changes,k0=ck();S=await getSet();renderInfo();if(ck()!==k0)renderCountdown();
+ if(ST&&$('res').querySelector('.kv')){if(o!==canReg()||oa!==S.allow_student_changes)renderStu();else if(ST.registered)refreshRank()}}catch(e){}}
+async function initStudent(){try{S=await getSet();renderInfo();await syncClock();renderCountdown();setInterval(sync,30000)}catch(e){toast('Erreur de connexion à la base de données.',false)}}
+const sinfo=()=>`<div class="card"><h3>${esc(ST.full_name)}</h3><div class="kv"><span>Nom complet</span><b>${esc(ST.full_name)}</b><span>Matricule</span><b>${esc(ST.matricule)}</b><span>Filière</span><b>${SP[ST.specialty]}</b><span>Statut d'inscription</span><b>${ST.registered?'Inscrit':'Non inscrit'}</b></div></div>`;
+const choose=()=>`<p class="lead">Veuillez choisir votre journée de soutenance.</p><div class="days">${dayCard('vendredi',S,1)+dayCard('samedi',S,1)}</div><div id="cf"></div>`;
+function renderStu(){let h=sinfo();
+ if(ST.registered){h+=`<div class="card ok"><h3>Votre choix a été enregistré avec succès !</h3><div class="kv"><span>Nom complet</span><b>${esc(ST.full_name)}</b><span>Matricule</span><b>${esc(ST.matricule)}</b><span>Filière</span><b>${SP[ST.specialty]}</b><span>Journée choisie</span><b>${fd(ST.selected_date)}</b><span>Heure de début</span><b>${ft(ST.start_time)}</b></div></div>`;
+  h+='<div id="rk"></div>';
+  if(canReg()&&S.allow_student_changes)h+=choose()}
+ else h+=canReg()?choose():(S.registration_open&&!started()?'<div class="msg err">Les inscriptions ne sont pas encore ouvertes. Veuillez patienter jusqu\'à la fin du compte à rebours.</div>':'<div class="msg err">Les inscriptions sont actuellement fermées.</div>');
+ $('res').innerHTML=h;pick=null;if(ST.registered)refreshRank()}
+$('sf').onsubmit=async e=>{e.preventDefault();const m=$('mat').value.trim();if(!m)return;busy(1);
+ try{const[s2,{data,error}]=await Promise.all([getSet(),sb.rpc('find_student',{p_matricule:m})]);S=s2;if(error)throw error;
+  if(!data.found){$('res').innerHTML='<div class="msg err">Aucun étudiant ne correspond à ce numéro de matricule. Veuillez vérifier votre numéro, puis contacter le chef de votre filière.</div>';return}
+  ST=data;renderStu()}catch(x){toast('Erreur de connexion : '+x.message,false)}finally{busy(0)}};
+$('res').onclick=async e=>{const d=e.target.closest('.day');
+ if(d){document.querySelectorAll('#res .day').forEach(x=>x.classList.toggle('sel',x===d));pick=d.dataset.d;
+  $('cf').innerHTML=`<div class="card"><h3>Confirmez-vous votre choix de journée de soutenance ?</h3><div class="kv"><span>Étudiant</span><b>${esc(ST.full_name)} (${esc(ST.matricule)})</b><span>Filière</span><b>${SP[ST.specialty]}</b><span>Journée</span><b>${fd(S[pick=='vendredi'?'friday_date':'saturday_date'])}</b><span>Heure de début</span><b>${ft(S[pick=='vendredi'?'friday_start_time':'saturday_start_time'])}</b></div><p class="row"><button class="b" data-x="ok">Confirmer</button><button class="b b2" data-x="no">Annuler</button></p></div>`;$('cf').scrollIntoView({behavior:'smooth'});return}
+ const x=e.target.dataset.x;if(x=='no'){$('cf').innerHTML='';document.querySelectorAll('#res .day').forEach(y=>y.classList.remove('sel'))}
+ if(x=='ok'){e.target.disabled=true;busy(1);try{const{data,error}=await sb.rpc('register_student',{p_matricule:ST.matricule,p_day:pick});if(error)throw error;ST=data;renderStu();toast('Votre choix a été enregistré avec succès !')}
+  catch(z){const m=z.message||'';toast(m.includes('NOT_STARTED')?'Les inscriptions ne sont pas encore ouvertes.':m.includes('ALREADY')?'Vous êtes déjà inscrit(e) : modification impossible.':m.includes('CLOSED')?'Les inscriptions sont fermées.':m.includes('NOT_FOUND')?'Matricule introuvable.':'Erreur : '+m,false);e.target.disabled=false}finally{busy(0)}}};
+
+/* ================= ACCÈS ADMIN (5 clics sur le logo) ================= */
+let clicks=0,ctm,isAdm=false;
+$('logo').onclick=()=>{clearTimeout(ctm);ctm=setTimeout(()=>clicks=0,2500);if(++clicks>=5){clicks=0;if(!isAdm){$('login').hidden=false;$('em').focus()}}};
+$('lc').onclick=()=>$('login').hidden=true;
+async function checkAdmin(){const{data:{session}}=await sb.auth.getSession();if(!session)return false;
+ const{data,error}=await sb.from('admin_profiles').select('role').eq('user_id',session.user.id).maybeSingle();if(error)throw new Error('Erreur base de données : '+error.message+' — exécutez supabase.sql puis fix_admin.sql dans Supabase.');return !!data}
+$('lf').onsubmit=async e=>{e.preventDefault();busy(1);$('le').innerHTML='';
+ try{const{error}=await sb.auth.signInWithPassword({email:$('em').value.trim(),password:$('pw').value});if(error)throw error;
+  if(!await checkAdmin()){await sb.auth.signOut();throw new Error('Ce compte n\'a pas les droits administrateur.')}
+  $('login').hidden=true;$('pw').value='';await enterAdmin()}catch(x){$('le').innerHTML=`<div class="msg err">${esc(x.message)}</div>`}finally{busy(0)}};
+$('out').onclick=async()=>{await sb.auth.signOut();location.reload()};
+
+/* ================= TABLEAU DE BORD ADMIN ================= */
+let R=[],LG=[],cur='stats',F={q:'',sp:'',day:''},rt,PV=null;
+const TABS={stats:'Statistiques',plan:'Planning des soutenances',imp:'Gestion des listes',exp:'Exports',set:'Paramètres',log:'Journal'};
+async function all(t){let o=[],f=0;for(;;){const{data,error}=await sb.from(t).select('*').order('id').range(f,f+999);if(error)throw error;o=o.concat(data);if(data.length<1000)return o;f+=1000}}
+async function load(){busy(1);try{const[s,g,st,lg]=await Promise.all([all('students'),all('registrations'),getSet(),sb.from('audit_logs').select('*').order('created_at',{ascending:false}).limit(300)]);
+ const m={};g.forEach(x=>m[x.student_id]=x);R=s.map(x=>({...x,reg:m[x.id]}));S=st;LG=lg.data||[];draw()}catch(e){toast('Erreur de chargement : '+e.message,false)}finally{busy(0)}}
+async function enterAdmin(){need('xlsx').catch(()=>{});isAdm=true;$('stu').hidden=true;$('adm').hidden=false;
+ $('tabs').innerHTML=Object.entries(TABS).map(([k,v])=>`<button data-t="${k}">${v}</button>`).join('');
+ await load();const rl=()=>{clearTimeout(rt);rt=setTimeout(()=>{if(cur!='imp'&&cur!='set')load()},1500)};
+ ['registrations','students'].forEach(t=>sb.channel('rt-'+t).on('postgres_changes',{event:'*',schema:'public',table:t},rl).subscribe())}
+$('tabs').onclick=e=>{const t=e.target.dataset.t;if(t){cur=t;draw()}};
+function draw(){document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t==cur));({stats:dStats,plan:dPlan,imp:dImp,exp:dExp,set:dSet,log:dLog})[cur]()}
+const cnt=sp=>{const a=R.filter(r=>!sp||r.specialty==sp),v=a.filter(r=>r.reg?.selected_day=='vendredi').length,s=a.filter(r=>r.reg?.selected_day=='samedi').length;return{t:a.length,i:v+s,n:a.length-v-s,v,s}};
+const sc=(l,v)=>`<div class="st"><b>${v}</b><span>${l}</span></div>`;
+function dStats(){$('tab').innerHTML=[['','Tous les étudiants'],['BA3',SP.BA3],['FC3',SP.FC3]].map(([k,l])=>{const c=cnt(k),m=Math.max(1,c.t);
+ return`<div class="card"><h3>${l}</h3><div class="grid">${sc('Total des étudiants',c.t)+sc('Inscrits',c.i)+sc('Non inscrits',c.n)+sc('Vendredi',c.v)+sc('Samedi',c.s)}</div>
+ <div style="margin-top:12px">${[['Vendredi',c.v],['Samedi',c.s],['Non inscrits',c.n]].map(([a,b])=>`<div class="bar"><span>${a}</span><i style="width:${b/m*70}%"></i><b>${b}</b></div>`).join('')}</div></div>`}).join('')}
+const acts=r=>`<td class="act"><button data-a="v" data-i="${r.id}" title="Vendredi">V</button><button data-a="s" data-i="${r.id}" title="Samedi">S</button><button data-a="e" data-i="${r.id}" title="Modifier">✎</button>${r.reg?`<button data-a="u" data-i="${r.id}" title="Annuler l'inscription">↺</button>`:''}<button data-a="d" data-i="${r.id}" title="Supprimer l'étudiant">🗑</button></td>`;
+const fl=r=>(!F.sp||r.specialty==F.sp)&&(!F.q||(r.matricule+' '+r.full_name).toLowerCase().includes(F.q.toLowerCase()))&&(!F.day||(F.day=='none'?!r.reg:r.reg?.selected_day==F.day));
+const rkm=sp=>(S&&S['rank_method_'+String(sp).toLowerCase()])||(sp=='FC3'?'date':'mat');
+const cmpM=m=>m=='date'?(a,b)=>new Date(a.reg.registered_at)-new Date(b.reg.registered_at)||cmp(a,b):cmp;
+const srt=a=>a.sort((x,y)=>x.specialty.localeCompare(y.specialty)||cmpM(rkm(x.specialty))(x,y));
+const tbl=(rows,rk)=>{const q={};return`<div class="tw"><table><tr><th>N° d'ordre<th>Numéro de matricule<th>Nom complet<th>Filière<th>Date d'inscription<th>Actions</tr>${rows.map((r,i)=>`<tr><td>${rk?(q[r.specialty]=(q[r.specialty]||0)+1):i+1}<td>${esc(r.matricule)}<td>${esc(r.full_name)}<td>${r.specialty}<td>${fdt(r.reg?.registered_at)}${acts(r)}</tr>`).join('')||'<tr><td colspan="6">Aucun étudiant</tr>'}</table></div>`};
+function dPlan(){$('tab').innerHTML=`<div class="card"><div class="row"><input id="fq" placeholder="Rechercher (matricule ou nom)" value="${esc(F.q)}"><select id="fs"><option value="">Toutes filières<option>BA3<option>FC3</select><select id="fy"><option value="">Tous les étudiants<option value="vendredi">Vendredi<option value="samedi">Samedi<option value="none">Sans journée choisie</select></div></div><div id="pt"></div>`;
+ $('fs').value=F.sp;$('fy').value=F.day;$('fq').oninput=e=>{F.q=e.target.value;clearTimeout(pt.h);pt.h=setTimeout(pt,150)};$('fs').onchange=e=>{F.sp=e.target.value;pt()};$('fy').onchange=e=>{F.day=e.target.value;pt()};pt()}
+function pt(){const L=d=>srt(R.filter(r=>r.reg?.selected_day==d&&fl(r))),h=[];
+ if(!F.day||F.day=='vendredi')h.push(`<div class="card"><h3>Tableau 1 — ${fd(S.friday_date)}</h3><p>Heure de début : ${ft(S.friday_start_time)} — ${L('vendredi').length} étudiant(s)</p>${tbl(L('vendredi'),1)}</div>`);
+ if(!F.day||F.day=='samedi')h.push(`<div class="card"><h3>Tableau 2 — ${fd(S.saturday_date)}</h3><p>Heure de début : ${ft(S.saturday_start_time)} — ${L('samedi').length} étudiant(s)</p>${tbl(L('samedi'),1)}</div>`);
+ if(!F.day||F.day=='none'){const n=R.filter(r=>!r.reg&&fl(r)).sort(cmp);h.push(`<div class="card"><h3>Étudiants sans journée choisie</h3><p>${n.length} étudiant(s)</p>${tbl(n)}</div>`)}
+ $('pt').innerHTML=h.join('')}
+$('adm').onclick=async e=>{const b=e.target.closest('[data-a]');if(!b)return;const id=b.dataset.i,r=R.find(x=>x.id==id),a=b.dataset.a;busy(1);
+ try{let er;
+  if(a=='v'||a=='s')({error:er}=await sb.rpc('admin_set_registration',{p_student:id,p_day:a=='v'?'vendredi':'samedi'}));
+  else if(a=='e'){const n=prompt(tr('Nom complet'),r.full_name);if(!n?.trim())return;const m=prompt(tr('Numéro de matricule'),r.matricule);if(!m?.trim())return;({error:er}=await sb.from('students').update({full_name:n.trim(),matricule:m.trim()}).eq('id',id))}
+  else if(a=='u'){if(!confirm(tr('Annuler l\'inscription de ')+r.full_name+(LANG=='ar'?' ؟':' ?')))return;({error:er}=await sb.from('registrations').delete().eq('student_id',id))}
+  else if(a=='d'){if(!confirm(tr('Supprimer définitivement ')+r.full_name+(LANG=='ar'?' ؟':' ?')))return;({error:er}=await sb.from('students').delete().eq('id',id))}
+  if(er)throw er;await load();toast('Opération effectuée.')}catch(x){toast('Erreur : '+x.message,false)}finally{busy(0)}};
+
+/* ---------- Import des listes ---------- */
+function dImp(){PV=null;$('tab').innerHTML=`<div class="card"><h3>Ajouter un étudiant</h3><div class="row"><select id="as"><option value="BA3">${SP.BA3}<option value="FC3">${SP.FC3}</select><input id="am" placeholder="Numéro de matricule" autocomplete="off"><input id="an" placeholder="Nom complet" autocomplete="off"><button class="b" id="ab">Ajouter l'étudiant</button></div></div><div class="card"><h3>Gestion des listes des étudiants</h3><div class="row"><select id="isp"><option value="BA3">${SP.BA3}<option value="FC3">${SP.FC3}</select><select id="imd"><option value="add">Ajouter une nouvelle liste (ignore les matricules existants)<option value="update">Mettre à jour une liste existante (conserve les inscriptions)</select><input type="file" id="file" accept=".xlsx,.xls,.csv"></div><p style="color:#475569;font-size:.85rem">Colonnes requises : <b>Numéro de matricule</b>, <b>Nom complet</b>, <b>Filière</b> (facultative, vérifiée si présente). Les étudiants absents du fichier ne sont jamais supprimés.</p></div><div id="pv"></div>`;
+ $('ab').onclick=async()=>{const m=$('am').value.trim(),n=$('an').value.replace(/\s+/g,' ').trim();if(!m||!n)return toast('Matricule et nom complet obligatoires.',false);busy(1);
+  const{error}=await sb.from('students').insert({matricule:m,full_name:n,specialty:$('as').value});busy(0);
+  if(error)return toast(error.code=='23505'?'Ce numéro de matricule existe déjà.':'Erreur : '+error.message,false);
+  await load();toast('Étudiant ajouté.')}
+ $('file').onchange=parseFile;$('isp').onchange=$('imd').onchange=()=>{if($('file').files[0])parseFile()}}
+async function parseFile(){const f=$('file').files[0];if(!f)return;const sp=$('isp').value,md=$('imd').value;busy(1);
+ try{await need('xlsx');let wb;if(/\.csv$/i.test(f.name)){let t=(await f.text()).replace(/^\uFEFF/,'');if(/^[^,\n]*;/.test(t))t=t.replace(/;/g,',');wb=XLSX.read(t,{type:'string',raw:true})}else wb=XLSX.read(await f.arrayBuffer(),{type:'array'});
+  const rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1,raw:false,defval:''}),h=(rows[0]||[]).map(String);
+  const mi=h.findIndex(c=>/matric/i.test(c)),ni=h.findIndex(c=>/nom|name/i.test(c)),fi=h.findIndex(c=>/fili|sp[eé]c/i.test(c));
+  if(mi<0||ni<0)throw new Error('Colonnes introuvables : « Numéro de matricule » et « Nom complet » sont obligatoires.');
+  const ex=new Map(R.map(r=>[r.matricule,r])),seen=new Set(),out=[];
+  rows.slice(1).forEach((r,i)=>{const m=String(r[mi]).trim(),n=String(r[ni]).replace(/\s+/g,' ').trim(),fv=fi>=0?String(r[fi]):'';if(!m&&!n&&!fv.trim())return;
+   let e='',w='';const code=/ba3|banque|assurance/i.test(fv)?'BA3':/fc3|finance|compta/i.test(fv)?'FC3':'';
+   if(!m)e='Matricule manquant';else if(!n)e='Nom manquant';else if(seen.has(m))e='Matricule dupliqué dans le fichier';else if(fv.trim()&&code&&code!=sp)e='Filière ('+code+') ≠ '+sp;
+   if(!e){seen.add(m);const x=ex.get(m);if(x)w=md=='add'?'Existe déjà — ignoré':'Sera mis à jour'+(x.specialty!=sp?' (filière '+x.specialty+' → '+sp+')':'')}
+   out.push({l:i+2,m,n,e,w})});
+  PV={sp,md,ok:out.filter(x=>!x.e)};const bad=out.length-PV.ok.length;
+  $('pv').innerHTML=`<div class="card"><h3>Aperçu — ${out.length} ligne(s) : ${PV.ok.length} valide(s), ${bad} erreur(s)</h3>${bad?'<div class="msg err">Les lignes en erreur ne seront pas importées.</div>':''}<div class="tw" style="max-height:340px;overflow:auto"><table><tr><th>Ligne<th>Matricule<th>Nom complet<th>État</tr>${out.slice(0,500).map(x=>`<tr><td>${x.l}<td>${esc(x.m)}<td>${esc(x.n)}<td style="color:${x.e?'#b91c1c':x.w?'#b45309':'#047857'}">${x.e||x.w||'OK'}</tr>`).join('')}</table></div>${out.length>500?'<p>(aperçu limité à 500 lignes)</p>':''}<p><button class="b" id="go" ${PV.ok.length?'':'disabled'}>Importer ${PV.ok.length} ligne(s) valide(s) vers ${sp}</button></p></div>`;
+  $('go').onclick=doImport}catch(x){$('pv').innerHTML=`<div class="msg err">${esc(x.message)}</div>`}finally{busy(0)}}
+async function doImport(){$('go').disabled=true;busy(1);const t={inserted:0,updated:0,skipped:0,invalid:0};
+ try{const rows=PV.ok.map(x=>({matricule:x.m,full_name:x.n}));for(let i=0;i<rows.length;i+=500){const{data,error}=await sb.rpc('admin_import_students',{p_specialty:PV.sp,p_rows:rows.slice(i,i+500),p_mode:PV.md});if(error)throw error;for(const k in t)t[k]+=data[k]}
+  await load();dImp();$('pv').innerHTML=`<div class="msg okm">Import terminé : ${t.inserted} ajouté(s), ${t.updated} mis à jour, ${t.skipped} ignoré(s), ${t.invalid} invalide(s).</div>`}catch(x){toast('Erreur d\'import : '+x.message,false);$('go').disabled=false}finally{busy(0)}}
+
+/* ---------- Exports ---------- */
+function dExp(){$('tab').innerHTML=`<div class="card"><h3>Télécharger les listes</h3><p>Format : <select id="fmt" style="max-width:200px"><option value="xlsx">Excel (.xlsx)<option value="csv">CSV<option value="pdf">PDF</select></p><p>Ordre de tri des inscrits : <select id="ord" style="max-width:340px"><option value="mat">Par numéro de matricule<option value="date">Par date et heure d'inscription</select></p><p>Filière : <select id="esp" style="max-width:340px"><option value="">Toutes les filières (BA3 et FC3)<option value="BA3">${SP.BA3}<option value="FC3">${SP.FC3}</select></p><p>Journée : <select id="ejr" style="max-width:340px"><option value="vendredi">Vendredi<option value="samedi">Samedi<option value="both">Vendredi et Samedi (liste commune)<option value="none">Étudiants non inscrits<option value="all">Toutes les listes (Vendredi, Samedi, Non inscrits)</select></p><p><button class="b" id="edl">Télécharger la liste</button></p></div>`;
+ $('edl').onclick=()=>exportLists($('ejr').value,$('fmt').value)}
+function mkList(title,meta,rows,sp,od){const c=od=='date'?(a,b)=>new Date(a.reg.registered_at)-new Date(b.reg.registered_at)||cmp(a,b):cmp;return{title,meta:od?meta+' — Tri : '+(od=='date'?"date et heure d'inscription":'numéro de matricule'):meta,sp:sp||'BA3 & FC3',rows:[...rows].sort(c).map((r,i)=>[i+1,r.matricule,r.full_name,r.specialty,r.reg?DY[r.reg.selected_day]:'—',fdt(r.reg?.registered_at)])}}
+async function exportLists(k,f){busy(1);try{await need('xlsx');if(f=='pdf'){await need('jspdf');await need('atb')}}catch(e){busy(0);return toast(e.message,false)}busy(0);const o=LANG;LANG='fr';try{exportLists0(k,f)}finally{LANG=o}}
+function exportLists0(k,fmt){const od=$('ord')?$('ord').value:'mat',esp=$('esp')?$('esp').value:'',byS=a=>esp?a.filter(r=>r.specialty==esp):a,spl=esp?SP[esp]:null,tag=esp?' — '+SP[esp]:'';
+ const V=byS(R.filter(r=>r.reg?.selected_day=='vendredi')),Sa=byS(R.filter(r=>r.reg?.selected_day=='samedi')),reg=byS(R.filter(r=>r.reg)),nb=byS(R.filter(r=>!r.reg));
+ const lv=mkList('Vendredi',`Vendredi — ${fd(S.friday_date)} — Début : ${ft(S.friday_start_time)}${tag}`,V,spl,od),ls=mkList('Samedi',`Samedi — ${fd(S.saturday_date)} — Début : ${ft(S.saturday_start_time)}${tag}`,Sa,spl,od);
+ const lr=mkList('Vendredi & Samedi','Vendredi & Samedi'+tag,reg,spl,od),ln=mkList('Non inscrits','Étudiants sans journée choisie'+tag,nb,spl);
+ const Ls={vendredi:[lv],samedi:[ls],both:[lr],none:[ln],all:[lv,ls,ln]}[k];
+ const H=['N° d\'ordre','Numéro de matricule','Nom complet','Filière','Journée','Date d\'inscription'],now='Liste extraite le '+fdt(new Date().toISOString()),
+  head=l=>[['Institut Supérieur de Comptabilité et d’Administration des Entreprises (ISCAE)'],['Programmation de Soutenance — '+l.sp],['Promotion 2026-2027'],[l.meta],[now],[]];
+ const n=Ls.reduce((a,l)=>a+l.rows.length,0),name='soutenances_'+k+(esp?'_'+esp:'')+'_'+new Date().toISOString().slice(0,10);
+ if(fmt=='xlsx'){const wb=XLSX.utils.book_new();Ls.forEach(l=>{const ws=XLSX.utils.aoa_to_sheet([...head(l),H,...l.rows]);ws['!cols']=[{wch:10},{wch:20},{wch:38},{wch:8},{wch:12},{wch:22}];XLSX.utils.book_append_sheet(wb,ws,l.title.slice(0,31))});XLSX.writeFile(wb,name+'.xlsx')}
+ else if(fmt=='csv'){const t='\uFEFF'+Ls.map(l=>XLSX.utils.sheet_to_csv(XLSX.utils.aoa_to_sheet([...head(l),H,...l.rows]),{FS:';'})).join('\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/csv;charset=utf-8'}));a.download=name+'.csv';a.click()}
+ else{const doc=new jspdf.jsPDF();Ls.forEach((l,i)=>{if(i)doc.addPage();doc.setFontSize(10);doc.text('Institut Supérieur de Comptabilité et d’Administration des Entreprises (ISCAE)',105,12,{align:'center'});doc.setFontSize(16);doc.setFont(undefined,'bold');doc.text('Programmation de Soutenance',105,21,{align:'center'});doc.setFontSize(12);doc.text(l.sp,105,28,{align:'center'});doc.setFont(undefined,'normal');doc.setFontSize(10);doc.text('Promotion 2026-2027',105,34,{align:'center'});doc.text(l.meta,105,40,{align:'center'});doc.text(now,105,46,{align:'center'});
+  doc.autoTable({head:[H],body:l.rows,startY:51,styles:{fontSize:8},headStyles:{fillColor:[10,37,64]},didDrawPage:()=>{doc.setFontSize(8);doc.text('Développé par MDA',105,290,{align:'center'})}})});doc.save(name+'.pdf')}
+ toast(n+' ligne(s) exportée(s) — base : '+({vendredi:V.length+' inscrits',samedi:Sa.length+' inscrits',both:reg.length+' inscrits',none:nb.length+' non inscrits',all:(V.length+Sa.length+nb.length)+' étudiants'})[k])}
+
+/* ---------- Paramètres ---------- */
+function dSet(){$('tab').innerHTML=`<div class="card"><h3>Paramètres (heure de Nouakchott — ${TZ})</h3><div class="row"><label>Date du vendredi<input type="date" id="s1" value="${S.friday_date}"></label><label>Début vendredi<input type="time" id="s2" value="${S.friday_start_time.slice(0,5)}"></label></div><div class="row" style="margin-top:10px"><label>Date du samedi<input type="date" id="s3" value="${S.saturday_date}"></label><label>Début samedi<input type="time" id="s4" value="${S.saturday_start_time.slice(0,5)}"></label></div>
+ <div class="row" style="margin-top:10px"><label>Début des inscriptions (date et heure de Nouakchott)<input type="datetime-local" id="s7" value="${S.registration_start_at?new Date(S.registration_start_at).toISOString().slice(0,16):''}"></label><button type="button" class="b b2" id="s7c">Ouvrir immédiatement (effacer la date)</button></div>
+ <p><label><input type="checkbox" id="s5" style="width:auto" ${S.registration_open?'checked':''}> Inscriptions ouvertes</label><br><label><input type="checkbox" id="s6" style="width:auto" ${S.allow_student_changes?'checked':''}> Autoriser les étudiants à modifier leur choix</label></p>
+ <p class="row"><button class="b" id="ss">Enregistrer</button><button class="b b2" id="bk">Exporter une sauvegarde (JSON)</button></p><p style="color:#475569;font-size:.85rem">Les inscriptions déjà enregistrées conservent la date et l'heure de leur enregistrement ; utilisez les actions V/S du planning pour les réaffecter.</p></div>
+ <div class="card"><h3>Mode de classement par filière (appliqué immédiatement)</h3><div class="row"><label>${SP.BA3}<select id="rm_ba3"><option value="mat" ${rkm('BA3')=='mat'?'selected':''}>Par numéro de matricule<option value="date" ${rkm('BA3')=='date'?'selected':''}>Par ordre d'inscription (premier inscrit, premier servi)</select></label><label>${SP.FC3}<select id="rm_fc3"><option value="mat" ${rkm('FC3')=='mat'?'selected':''}>Par numéro de matricule<option value="date" ${rkm('FC3')=='date'?'selected':''}>Par ordre d'inscription (premier inscrit, premier servi)</select></label></div><p style="color:#475569;font-size:.85rem">Par ordre d'inscription : l'étudiant voit son numéro d'ordre dès son inscription. Par numéro de matricule : le numéro d'ordre n'est affiché qu'après l'inscription de tous les étudiants de la filière.</p></div>
+ <div class="card dz"><h3>Supprimer les inscriptions d'une filière</h3><div class="row"><select id="drs"><option value="BA3">${SP.BA3}<option value="FC3">${SP.FC3}</select><button class="b bd" id="dr" type="button">Supprimer toutes les inscriptions de cette filière</button></div></div>`;
+ $('s7c').onclick=()=>{$('s7').value=''};
+ $('ss').onclick=async()=>{busy(1);const base={friday_date:$('s1').value,friday_start_time:$('s2').value,saturday_date:$('s3').value,saturday_start_time:$('s4').value,registration_open:$('s5').checked,allow_student_changes:$('s6').checked},v=$('s7').value;
+  let{error}=await sb.from('platform_settings').update({...base,registration_start_at:v?v+':00Z':null}).eq('id',1);
+  if(error&&/registration_start_at|column/i.test(error.message)){({error}=await sb.from('platform_settings').update(base).eq('id',1));busy(0);if(error)return toast(error.message,false);await load();return toast('Paramètres enregistrés, mais la date de début n\'a pas été enregistrée : exécutez migration.sql dans Supabase.',false)}
+  busy(0);if(error)return toast(error.message,false);await load();toast('Paramètres enregistrés.')};
+ ['ba3','fc3'].forEach(k=>{$('rm_'+k).onchange=async e=>{busy(1);const{error}=await sb.from('platform_settings').update({['rank_method_'+k]:e.target.value}).eq('id',1);busy(0);if(error){toast(error.message.includes('rank_method')?'Colonne manquante : exécutez migration.sql dans Supabase.':error.message,false);return load()}await load();toast('Mode de classement appliqué.')}});
+ $('dr').onclick=async()=>{const sp=$('drs').value,ids=R.filter(r=>r.specialty==sp&&r.reg).map(r=>r.id);if(!ids.length)return toast('Aucune inscription à supprimer pour cette filière.',false);
+  if(!confirm(tr('Supprimer définitivement toutes les inscriptions de la filière ')+sp+' ('+ids.length+') '+(LANG=='ar'?'؟':'?')))return;busy(1);
+  try{for(let i=0;i<ids.length;i+=200){const{error}=await sb.from('registrations').delete().in('student_id',ids.slice(i,i+200));if(error)throw error}await load();toast('Inscriptions de la filière supprimées.')}catch(x){toast('Erreur : '+x.message,false)}finally{busy(0)}};
+ $('bk').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({exported_at:new Date().toISOString(),settings:S,students:R.map(({reg,...s})=>s),registrations:R.filter(r=>r.reg).map(r=>r.reg),audit_logs:LG},null,1)],{type:'application/json'}));a.download='sauvegarde_soutenances_'+new Date().toISOString().slice(0,10)+'.json';a.click()}}
+function dLog(){$('tab').innerHTML=`<div class="card"><h3>Journal des opérations (300 dernières)</h3><div class="tw"><table><tr><th>Date<th>Action<th>Étudiant concerné<th>Auteur</tr>${LG.map(l=>`<tr><td>${fdt(l.created_at)}<td>${esc(l.action)}<td>${esc(l.affected_student)}<td>${l.admin_id?'Admin':'Étudiant'}</tr>`).join('')||'<tr><td colspan="4">Aucune entrée</tr>'}</table></div></div>`}
+
+/* ================= TRADUCTION FR ⇄ AR (bouton en haut de page) ================= */
+/* EX = mots/phrases exacts (nœud entier) ; P = phrases partielles. Les exports Excel/CSV/PDF restent en français (documents officiels). */
+const EX={"OK":"صالح","Ligne":"السطر","État":"الحالة","Actions":"إجراءات","Filière":"التخصص","Matricule":"رقم التسجيل","Nom complet":"الاسم الكامل","Numéro de matricule":"رقم التسجيل","Vendredi":"الجمعة","Samedi":"السبت","VENDREDI":"الجمعة","SAMEDI":"السبت","Inscrit":"مسجّل","Non inscrit":"غير مسجّل","Inscrits":"المسجّلون","Non inscrits":"غير المسجّلين","Confirmer":"تأكيد","Annuler":"إلغاء","Email":"البريد الإلكتروني","Étudiant":"الطالب","Date":"التاريخ","Action":"الإجراء","Auteur":"المنفّذ","Admin":"مشرف","Modifier":"تعديل","Enregistrer":"حفظ","Déconnexion":"تسجيل الخروج","Rechercher mon dossier":"البحث عن ملفي","Choisir cette journée":"اختيار هذا اليوم","Se connecter":"تسجيل الدخول","Mot de passe":"كلمة المرور","Journée choisie":"اليوم المختار","Journée":"اليوم","Heure de début":"وقت البداية","Format :":"الصيغة :","Statistiques":"الإحصائيات","Planning des soutenances":"جدول المناقشات","Gestion des listes":"إدارة القوائم","Exports":"التصدير","Paramètres":"الإعدادات","Journal":"السجل","Total des étudiants":"إجمالي الطلاب","Tous les étudiants":"جميع الطلاب","Toutes filières":"جميع التخصصات","Sans journée choisie":"بدون يوم مختار","Étudiants sans journée choisie":"طلاب لم يختاروا يوماً","Aucun étudiant":"لا يوجد طلاب","N° d'ordre":"رقم الترتيب","Date d'inscription":"تاريخ التسجيل","Statut d'inscription":"حالة التسجيل","Rechercher (matricule ou nom)":"بحث (رقم التسجيل أو الاسم)","Annuler l'inscription":"إلغاء التسجيل","Supprimer l'étudiant":"حذف الطالب","Étudiant concerné":"الطالب المعني","Aucune entrée":"لا توجد سجلات","Jours":"أيام","Heures":"ساعات","Minutes":"دقائق","Secondes":"ثواني","Filière :":"التخصص :","Journée :":"اليوم :","Votre numéro d'ordre de passage":"رقم ترتيبك للمناقشة","Effectif de la journée":"عدد طلاب اليوم","Mode de classement":"طريقة الترتيب"};
+const P={"Ordre de tri des inscrits :":"ترتيب المسجّلين :","Par numéro de matricule":"حسب رقم التسجيل","Par date et heure d'inscription":"حسب تاريخ ووقت التسجيل","Télécharger la liste des non inscrits":"تحميل قائمة غير المسجّلين","Télécharger les non inscrits BA3":"تحميل غير المسجّلين BA3","Télécharger les non inscrits FC3":"تحميل غير المسجّلين FC3","non inscrits":"غير مسجّل","Ajouter un étudiant":"إضافة طالب","Ajouter l'étudiant":"إضافة الطالب","Matricule et nom complet obligatoires.":"رقم التسجيل والاسم الكامل إلزاميان.","Ce numéro de matricule existe déjà.":"رقم التسجيل هذا موجود مسبقاً.","Étudiant ajouté.":"تمت إضافة الطالب.","Soutenance du Rapport de stage":"مناقشة تقرير التدريب","Chargement de la bibliothèque impossible. Vérifiez votre connexion.":"تعذّر تحميل المكتبة. تحقق من اتصالك.","Institut Supérieur de Comptabilité et d’Administration des Entreprises (ISCAE)":"المعهد العالي للمحاسبة وإدارة المؤسسات (ISCAE)","Plateforme de programmation des soutenances BA&FC — Promotion 2026.":"منصة برمجة مناقشات BA&FC — دفعة 2026.","Bienvenue sur la plateforme de programmation des soutenances BA&FC.":"مرحباً بكم في منصة برمجة مناقشات BA&FC.","Veuillez saisir votre numéro de matricule pour accéder à votre espace.":"يرجى إدخال رقم التسجيل للدخول إلى فضائكم.","Début des soutenances":"بداية المناقشات","Banque et Assurance (BA3)":"البنوك والتأمين (BA3)","Finance et Comptabilité (FC3)":"المالية والمحاسبة (FC3)","Heure de début :":"وقت البداية :","Votre choix a été enregistré avec succès !":"تم تسجيل اختياركم بنجاح!","Veuillez choisir votre journée de soutenance.":"يرجى اختيار يوم المناقشة.","Confirmez-vous votre choix de journée de soutenance ?":"هل تؤكدون اختياركم ليوم المناقشة؟","Les inscriptions sont actuellement fermées.":"التسجيل مغلق حالياً.","Aucun étudiant ne correspond à ce numéro de matricule. Veuillez vérifier votre numéro, puis contacter le chef de votre filière.":"لا يوجد طالب مطابق لهذا الرقم. يرجى التحقق من رقمكم ثم التواصل مع رئيس تخصصكم.","Erreur de connexion à la base de données.":"خطأ في الاتصال بقاعدة البيانات.","Erreur de connexion :":"خطأ في الاتصال :","Vous êtes déjà inscrit(e) : modification impossible.":"أنتم مسجّلون مسبقاً : التعديل غير ممكن.","Les inscriptions sont fermées.":"التسجيل مغلق.","Matricule introuvable.":"رقم التسجيل غير موجود.","Erreur d'import :":"خطأ في الاستيراد :","Erreur de chargement :":"خطأ في التحميل :","Erreur :":"خطأ :","Ce compte n'a pas les droits administrateur.":"هذا الحساب لا يملك صلاحيات المشرف.","Accès administrateur":"دخول المشرف","Tableau 1":"الجدول 1","Tableau 2":"الجدول 2","étudiant(s)":"طالب","Opération effectuée.":"تمت العملية.","Gestion des listes des étudiants":"إدارة قوائم الطلاب","Ajouter une nouvelle liste (ignore les matricules existants)":"إضافة قائمة جديدة (يتم تجاهل الأرقام الموجودة)","Mettre à jour une liste existante (conserve les inscriptions)":"تحديث قائمة موجودة (مع الحفاظ على التسجيلات)","Colonnes requises :":"الأعمدة المطلوبة :","facultative, vérifiée si présente":"اختياري، يُتحقق منه عند وجوده","Les étudiants absents du fichier ne sont jamais supprimés.":"الطلاب غير الموجودين في الملف لا يُحذفون أبداً.","Colonnes introuvables : « Numéro de matricule » et « Nom complet » sont obligatoires.":"الأعمدة غير موجودة : « رقم التسجيل » و « الاسم الكامل » إلزامية.","Matricule manquant":"رقم التسجيل مفقود","Nom manquant":"الاسم مفقود","Matricule dupliqué dans le fichier":"رقم تسجيل مكرر في الملف","Existe déjà — ignoré":"موجود مسبقاً — تم تجاهله","Sera mis à jour":"سيتم تحديثه","Filière (":"التخصص (","filière ":"التخصص ","Aperçu —":"معاينة —","ligne(s) valide(s) vers":"سطر صالح إلى","Importer ":"استيراد ","ligne(s) :":"سطر :","valide(s)":"صالح","erreur(s)":"خطأ","Les lignes en erreur ne seront pas importées.":"لن يتم استيراد الأسطر التي بها أخطاء.","(aperçu limité à 500 lignes)":"(المعاينة محدودة بـ 500 سطر)","Import terminé :":"اكتمل الاستيراد :","ajouté(s)":"مُضاف","mis à jour":"محدَّث","ignoré(s)":"متجاهَل","invalide(s)":"غير صالح","Télécharger les listes":"تحميل القوائم","Télécharger la liste du vendredi":"تحميل قائمة الجمعة","Télécharger la liste du samedi":"تحميل قائمة السبت","Télécharger la liste BA3":"تحميل قائمة BA3","Télécharger la liste FC3":"تحميل قائمة FC3","Télécharger toutes les listes":"تحميل جميع القوائم","ligne(s) exportée(s)":"سطر مُصدَّر","base :":"القاعدة :","étudiants":"طالب","inscrits":"مسجّل","Paramètres (heure de Nouakchott —":"الإعدادات (توقيت نواكشوط —","Date du vendredi":"تاريخ الجمعة","Début vendredi":"بداية الجمعة","Date du samedi":"تاريخ السبت","Début samedi":"بداية السبت","Inscriptions ouvertes":"التسجيل مفتوح","Autoriser les étudiants à modifier leur choix":"السماح للطلاب بتعديل اختيارهم","Exporter une sauvegarde (JSON)":"تصدير نسخة احتياطية (JSON)","Les inscriptions déjà enregistrées conservent la date et l'heure de leur enregistrement ; utilisez les actions V/S du planning pour les réaffecter.":"التسجيلات المحفوظة تحتفظ بتاريخ ووقت تسجيلها ؛ استخدموا الأزرار V/S في الجدول لإعادة تعيينها.","Paramètres enregistrés.":"تم حفظ الإعدادات.","Journal des opérations (300 dernières)":"سجل العمليات (آخر 300)","Développé par":"طُوِّر بواسطة","Annuler l'inscription de ":"إلغاء تسجيل ","Supprimer définitivement ":"حذف نهائي للطالب ","Filière :":"التخصص :","Journée :":"اليوم :","Toutes les filières (BA3 et FC3)":"جميع التخصصات (BA3 و FC3)","Vendredi et Samedi (liste commune)":"الجمعة والسبت (قائمة مشتركة)","Étudiants non inscrits":"الطلاب غير المسجّلين","Toutes les listes (Vendredi, Samedi, Non inscrits)":"جميع القوائم (الجمعة، السبت، غير المسجّلين)","Télécharger la liste":"تحميل القائمة","Ouverture des inscriptions dans":"فتح باب التسجيل بعد","(heure de Nouakchott)":"(بتوقيت نواكشوط)","Les inscriptions sont maintenant ouvertes !":"أصبح التسجيل مفتوحاً الآن !","Les inscriptions ne sont pas encore ouvertes. Veuillez patienter jusqu'à la fin du compte à rebours.":"التسجيل لم يُفتح بعد. يرجى الانتظار حتى انتهاء العدّ التنازلي.","Les inscriptions ne sont pas encore ouvertes.":"التسجيل لم يُفتح بعد.","Par ordre d'inscription (premier inscrit, premier servi)":"حسب ترتيب التسجيل (الأسبق تسجيلاً أولاً)","Votre numéro d'ordre sera affiché dès que tous les étudiants de votre filière auront choisi leur journée.":"سيظهر رقم ترتيبكم بمجرد أن يختار جميع طلاب تخصصكم يومهم.","Progression des inscriptions de votre filière":"تقدّم تسجيلات تخصصكم","Début des inscriptions (date et heure de Nouakchott)":"بداية التسجيل (التاريخ والوقت بتوقيت نواكشوط)","Ouvrir immédiatement (effacer la date)":"فتح فوري (مسح التاريخ)","Mode de classement par filière (appliqué immédiatement)":"طريقة الترتيب لكل تخصص (تُطبَّق فوراً)","Par ordre d'inscription : l'étudiant voit son numéro d'ordre dès son inscription. Par numéro de matricule : le numéro d'ordre n'est affiché qu'après l'inscription de tous les étudiants de la filière.":"حسب ترتيب التسجيل : يرى الطالب رقم ترتيبه فور تسجيله. حسب رقم التسجيل : لا يظهر رقم الترتيب إلا بعد تسجيل جميع طلاب التخصص.","Supprimer les inscriptions d'une filière":"حذف تسجيلات تخصص","Supprimer toutes les inscriptions de cette filière":"حذف جميع تسجيلات هذا التخصص","Supprimer définitivement toutes les inscriptions de la filière ":"حذف نهائي لجميع تسجيلات التخصص ","Mode de classement appliqué.":"تم تطبيق طريقة الترتيب.","Inscriptions de la filière supprimées.":"تم حذف تسجيلات التخصص.","Aucune inscription à supprimer pour cette filière.":"لا توجد تسجيلات لحذفها في هذا التخصص.","Colonne manquante : exécutez migration.sql dans Supabase.":"عمود ناقص : نفّذ migration.sql في Supabase.","Paramètres enregistrés, mais la date de début n'a pas été enregistrée : exécutez migration.sql dans Supabase.":"تم حفظ الإعدادات لكن تاريخ البداية لم يُحفظ : نفّذ migration.sql في Supabase.","Aucune inscription":"لا توجد تسجيلات"};
+const PH=Object.entries(P).sort((a,b)=>b[0].length-a[0].length);
+const trs=s=>{const t=s.trim();if(!t)return s;if(Object.prototype.hasOwnProperty.call(EX,t))return s.replace(t,EX[t]);let o=s;for(const[k,v]of PH)o=o.split(k).join(v);return o};
+const tr=s=>LANG=='ar'?trs(s):s;
+function trNode(n){
+ if(n.nodeType==3){if(n.parentElement?.closest('[data-nt]'))return;if(n.__o===undefined)n.__o=n.nodeValue;const v=LANG=='ar'?trs(n.__o):n.__o;if(n.nodeValue!==v)n.nodeValue=v}
+ else if(n.nodeType==1){if(n.closest('[data-nt]')||/^(SCRIPT|STYLE)$/.test(n.tagName))return;
+  for(const a of['placeholder','title']){if(n.hasAttribute(a)){const k='__o'+a;if(n[k]===undefined)n[k]=n.getAttribute(a);n.setAttribute(a,LANG=='ar'?trs(n[k]):n[k])}}
+  n.childNodes.forEach(trNode)}}
+const MO=new MutationObserver(ms=>ms.forEach(m=>m.addedNodes.forEach(trNode)));
+function setLang(l){LANG=l;l=='ar'?MO.observe(document.body,{childList:true,subtree:true}):MO.disconnect();try{localStorage.setItem('lang',l)}catch(e){}
+ document.documentElement.lang=l;document.documentElement.dir=l=='ar'?'rtl':'ltr';$('lg').textContent='🌐 '+(l=='ar'?'Français':'العربية');
+ if(S&&!$('stu').hidden){renderInfo();if(ST&&$('res').querySelector('.kv'))renderStu()}
+ if(isAdm&&(cur=='plan'||cur=='log'))draw();
+ trNode(document.body)}
+$('lg').onclick=()=>setLang(LANG=='ar'?'fr':'ar');
+function setTheme(t){document.documentElement.dataset.theme=t;$('th').textContent=t=='dark'?'☀️':'🌙';try{localStorage.setItem('theme',t)}catch(e){}}
+$('th').onclick=()=>setTheme(document.documentElement.dataset.theme=='dark'?'light':'dark');
+$('th').textContent=document.documentElement.dataset.theme=='dark'?'☀️':'🌙';
+let L0='fr';try{L0=localStorage.getItem('lang')||'fr'}catch(e){}
+if(L0=='ar')setLang('ar');
+
+/* ================= DÉMARRAGE ================= */
+initStudent();checkAdmin().then(ok=>{if(ok)enterAdmin()}).catch(()=>{});
+</script></body></html>
